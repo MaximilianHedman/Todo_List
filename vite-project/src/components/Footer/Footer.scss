@@ -1,0 +1,21 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    gap: 1rem;
+    background-color: hsl(0, 0%, 9%);
+
+    svg {
+        padding: .4rem;
+
+        &:hover {
+            border: 0;
+            border-radius: 100%;
+            background-color: #d64f4f;
+            color: #d64f4f;
+        }
+    }
+}
