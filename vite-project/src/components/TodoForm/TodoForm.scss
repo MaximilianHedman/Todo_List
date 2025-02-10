@@ -1,3 +1,5 @@
+@import '../../partials/colors';
+
 .todo-form {
     display: flex;
     flex-direction: column;
@@ -8,19 +10,17 @@
         width: 100%;
         min-height: 60px;
         padding: 0.5rem;
-        border: 1px solid #666;
+        border: 1px solid $todo-form-textarea-border-color;
         border-radius: 5px;
         font-size: 1rem;
-        background-color: #525252;
-        color: #fff;
+        background-color: $todo-form-textarea-background-color;
         resize: none;
         max-height: 120px;
         overflow: auto;
     }
 
     button {
-        background-color: #28a745;
-        color: #fff;
+        background-color: $todo-form-btn-background-color;
         padding: 0.6rem;
         border: none;
         border-radius: 5px;
@@ -29,7 +29,7 @@
         transition: 0.3s;
 
         &:hover {
-            background-color: #218838;
+            background-color: $todo-form-btn-hover-background-color;
         }
     }
 

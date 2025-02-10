@@ -1,0 +1,42 @@
+// ___________________________________________________________________GLOBAL________________________________________________________________
+$global-color: #fff;
+$global-background-color: #303030;
+// ___________________________________________________________________NAVBAR________________________________________________________________
+$nav-background-color: #1a1a1a;
+$nav-links-desktop-a-hover: #d64f4f;
+// ___________________________________________________________________FOOTER________________________________________________________________
+$footer-background-color: #171717;
+$footer-icon-hover-color: #d64f4f;
+// ___________________________________________________________________TODOAPP_______________________________________________________________
+$todo-app-background-color: #424242;
+$todo-app-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+// ___________________________________________________________________TODOCOMPLETEMSG_______________________________________________________
+$todo-complete-msg-color: #28a745;
+$todo-complete-msg-p-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+// ___________________________________________________________________TODOFORM______________________________________________________________
+$todo-form-textarea-background-color: #525252;
+$todo-form-textarea-border-color: #666;
+
+$todo-form-btn-background-color: #007bff;
+$todo-form-btn-hover-background-color: #0056b3;
+// ___________________________________________________________________TODOITEM______________________________________________________________
+$todo-item-background-color: #525252;
+$todo-item-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+
+$todo-item-btn-done-background-color: #29a847;
+$todo-item-btn-done-hover-background-color: #218737;
+
+$todo-item-btn-undo-background-color: #ffc400;
+$todo-item-btn-undo-hover-background-color: #d6a400;
+$todo-item-btn-undo-color: #000;
+
+$todo-item-btn-delete-background-color: #dc3545;
+$todo-item-btn-delete-hover-background-color: #c82333;
+// ___________________________________________________________________MODAL_________________________________________________________________
+$modal-overlay-background-color: #00000099;
+
+$modal-content-background-color: #424242;
+$modal-content-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+
+$modal-btn-close-background-color: #dc3545;
+$modal-btn-close-hover-background-color: #c82333;

@@ -1,10 +1,11 @@
-// Completion Message (Animated)
+@import '../../partials/colors';
+
 .complete-msg {
     text-align: center;
     margin-top: 1rem;
     font-size: 1.5rem;
     font-weight: bold;
-    color: #28a745;
+    color: $todo-complete-msg-color;
     animation: fadeIn 1s ease-in-out, bounce 1s infinite alternate;
 
     p {
@@ -12,7 +13,7 @@
         display: inline-block;
         padding: 0.8rem 1.5rem;
         border-radius: 10px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        box-shadow: $todo-complete-msg-p-box-shadow;
     }
 }
 

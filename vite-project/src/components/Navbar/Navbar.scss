@@ -1,10 +1,12 @@
+@import "../../partials/colors";
+
 nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: hsl(0, 0%, 10%);
+    background-color: $nav-background-color;
 
     .brand-container h2 {
         font-family: "Dancing Script", cursive;
@@ -23,6 +25,10 @@ nav {
         }
         .nav-links-desktop {
             display: none;
+
+            a:hover {
+                color: $nav-links-desktop-a-hover;
+            }
         }
     }
 }

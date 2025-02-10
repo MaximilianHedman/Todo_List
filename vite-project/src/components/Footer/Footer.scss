@@ -6,16 +6,18 @@ footer {
     text-align: center;
     padding: 1rem;
     gap: 1rem;
-    background-color: hsl(0, 0%, 9%);
+    background-color: $footer-background-color;
 
     svg {
         padding: .4rem;
+    }
 
-        &:hover {
-            border: 0;
-            border-radius: 100%;
-            background-color: #d64f4f;
-            color: #d64f4f;
+    a[href*="linkedin"] svg:hover,
+    a[href*="github"] svg:hover,
+    a[href*="facebook"] svg:hover {
+        path {
+            fill: $footer-icon-hover-color;
+            /* Change this to any desired color */
         }
     }
 }

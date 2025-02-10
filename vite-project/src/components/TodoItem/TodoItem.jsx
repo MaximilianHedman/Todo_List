@@ -9,7 +9,7 @@ const TodoItem = ({ todo, onToggleDone, onDeleteTodo }) => {
                 className={`btn btn-done ${todo.completed ? "completed" : ""}`}
                 onClick={() => onToggleDone(todo.id)}
             >
-                Done
+                {todo.completed ? "Undo" : "Done"}
             </button>
             <button className="btn btn-delete" onClick={() => onDeleteTodo(todo.id, todo.completed)}>
                 Delete
