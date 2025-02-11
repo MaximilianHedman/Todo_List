@@ -1,4 +1,5 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "./TodoItem.scss";
 
 const TodoItem = ({ todo, onToggleDone, onDeleteTodo }) => {
@@ -9,10 +10,18 @@ const TodoItem = ({ todo, onToggleDone, onDeleteTodo }) => {
                 className={`btn btn-done ${todo.completed ? "completed" : ""}`}
                 onClick={() => onToggleDone(todo.id)}
             >
-                {todo.completed ? "Undo" : "Done"}
+                {todo.completed ? (
+                    <>
+                        Undo <FontAwesomeIcon icon={["fas", "undo"]} className="icon-undo" />
+                    </>
+                ) : (
+                    <>
+                        Done <FontAwesomeIcon icon={["fas", "check-circle"]} />
+                    </>
+                )}
             </button>
             <button className="btn btn-delete" onClick={() => onDeleteTodo(todo.id, todo.completed)}>
-                Delete
+                Delete <FontAwesomeIcon icon={["fas", "trash"]} />
             </button>
         </div>
     );

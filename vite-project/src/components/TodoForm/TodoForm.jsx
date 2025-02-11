@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "./TodoForm.scss";
 
 const TodoForm = ({ onAddTodo }) => {
@@ -18,13 +19,12 @@ const TodoForm = ({ onAddTodo }) => {
         };
 
         onAddTodo(newTodo);
-        setInputTodo(""); // Clear input after submitting
+        setInputTodo("");
     };
 
-    // ✅ Listen for Enter key press inside textarea
     const handleKeyDown = (e) => {
         if (e.key === "Enter" && !e.shiftKey) {
-            e.preventDefault(); // Prevent new line (default behavior)
+            e.preventDefault();
             handleSubmit(e);
         }
     };
@@ -35,10 +35,12 @@ const TodoForm = ({ onAddTodo }) => {
                 type="text"
                 value={inputTodo}
                 onChange={(e) => setInputTodo(e.target.value)}
-                onKeyDown={handleKeyDown} // ✅ Handle Enter key press
+                onKeyDown={handleKeyDown}
                 placeholder="Enter a new todo"
             />
-            <button type="submit">Add</button>
+            <button type="submit">
+                Add <FontAwesomeIcon icon={["fas", "paper-plane"]} />
+            </button>
         </form>
     );
 };

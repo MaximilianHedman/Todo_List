@@ -2,7 +2,7 @@ import React from "react";
 import "./TodoCompleteMsg.scss";
 
 const TodoCompleteMsg = ({ allCompleted }) => {
-    if (!allCompleted) return null; // Hide if not all tasks are completed
+    if (!allCompleted) return null;
 
     return (
         <div className="complete-msg">

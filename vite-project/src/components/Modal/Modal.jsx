@@ -2,7 +2,6 @@ import React from "react";
 import "./Modal.scss";
 
 const Modal = ({ onClose, children }) => {
-    // Close modal when clicking outside the modal content
     const handleOutsideClick = (e) => {
         if (e.target.classList.contains("modal")) {
             onClose();

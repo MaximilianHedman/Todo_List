@@ -12,14 +12,9 @@ footer {
 
     svg {
         padding: .4rem;
-    }
 
-    a[href*="linkedin"] svg:hover,
-    a[href*="github"] svg:hover,
-    a[href*="facebook"] svg:hover {
-        path {
+        path:hover {
             fill: colors.$footer-icon-hover-color;
-            /* Change this to any desired color */
         }
     }
 }
