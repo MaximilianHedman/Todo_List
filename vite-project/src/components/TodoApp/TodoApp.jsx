@@ -3,7 +3,7 @@ import { TodoContext } from "../../context/TodoContext";
 import TodoForm from "./TodoForm/TodoForm";
 import TodoList from "./TodoList/TodoList";
 import Modal from "../Modal/Modal";
-import TodoCompleteMsg from "../TodoCompleteMsg/TodoCompleteMsg";
+import TodoCompleteMsg from "./TodoCompleteMsg/TodoCompleteMsg";
 import "./TodoApp.scss";
 
 const TodoApp = () => {
