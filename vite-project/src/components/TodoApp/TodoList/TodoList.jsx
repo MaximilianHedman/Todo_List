@@ -2,7 +2,7 @@ import React from "react";
 import TodoItem from "../TodoItem/TodoItem";
 import "./TodoList.scss";
 
-const TodoList = ({ todos, onToggleDone, onDeleteTodo }) => {
+const TodoList = ({ todos, onToggleDone, onDeleteTodo, onToggleOngoing }) => {
     return (
         <div className="todo-list">
             {todos.map((todo) => (
@@ -11,6 +11,7 @@ const TodoList = ({ todos, onToggleDone, onDeleteTodo }) => {
                     todo={todo}
                     onToggleDone={onToggleDone}
                     onDeleteTodo={onDeleteTodo}
+                    onToggleOngoing={onToggleOngoing} // ✅ Ensure function is passed
                 />
             ))}
         </div>

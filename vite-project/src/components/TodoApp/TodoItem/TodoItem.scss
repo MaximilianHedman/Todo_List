@@ -16,11 +16,22 @@
         font-size: 1rem;
         margin-right: 1rem;
         word-break: break-word;
-    }
 
-    .line-over {
-        // text-decoration: line-through;
-        color: colors.$todo-item-p-color;
+        &.completed-task {
+            color: colors.$todo-item-completed-task-p-color;
+
+            svg {
+                padding-left: .5rem;
+
+                path {
+                    fill: colors.$todo-item-completed-task-p-icon-color;
+                }
+            }
+        }
+
+        &.ongoing-text {
+            color: colors.$todo-item-ongoing-task-p-color;
+        }
     }
 
     .btn {
@@ -34,6 +45,27 @@
         font-size: 0.9rem;
         cursor: pointer;
         transition: 0.3s;
+
+        &.btn-start {
+            background-color: colors.$todo-item-btn-start-background-color;
+
+            &:hover {
+                background-color: colors.$todo-item-btn-start-hover-background-color;
+            }
+
+            &.undo {
+                background-color: colors.$todo-item-btn-undo-background-color;
+                color: colors.$todo-item-btn-undo-color;
+
+                &:hover {
+                    background-color: colors.$todo-item-btn-undo-hover-background-color;
+                }
+
+                svg path {
+                    fill: colors.$todo-item-btn-undo-icon-color;
+                }
+            }
+        }
 
         &.btn-done {
             background-color: colors.$todo-item-btn-done-background-color;

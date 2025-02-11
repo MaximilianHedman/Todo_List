@@ -18,13 +18,25 @@ export const TodoProvider = ({ children }) => {
     }, [todos]);
 
     const addTodo = (todo) => {
-        setTodos([todo, ...todos]);
+        setTodos([{ ...todo, ongoing: false }, ...todos]); // Ensure ongoing starts as false
     };
 
     const toggleTodo = (id) => {
         setTodos(
             todos.map((todo) =>
-                todo.id === id ? { ...todo, completed: !todo.completed } : todo
+                todo.id === id
+                    ? { ...todo, completed: !todo.completed, ongoing: false } // Mark done & remove ongoing
+                    : todo
+            )
+        );
+    };
+
+    const toggleOngoing = (id) => {
+        setTodos(
+            todos.map((todo) =>
+                todo.id === id
+                    ? { ...todo, ongoing: !todo.ongoing, completed: false } // Prevent marking completed while ongoing
+                    : todo
             )
         );
     };
@@ -38,7 +50,6 @@ export const TodoProvider = ({ children }) => {
             showModal("Cannot delete a todo that is not completed!");
             return;
         }
-
         deleteTodo(id);
     };
 
@@ -50,11 +61,11 @@ export const TodoProvider = ({ children }) => {
         setModal({ isVisible: false, message: "" });
     };
 
-
     const value = {
         todos,
         addTodo,
         toggleTodo,
+        toggleOngoing, // ✅ Ensure function is included
         deleteTodo,
         handleDeleteTodo,
         modal,

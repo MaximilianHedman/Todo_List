@@ -7,7 +7,7 @@ import TodoCompleteMsg from "./TodoCompleteMsg/TodoCompleteMsg";
 import "./TodoApp.scss";
 
 const TodoApp = () => {
-    const { todos, addTodo, toggleTodo, handleDeleteTodo, modal, closeModal } =
+    const { todos, addTodo, toggleTodo, toggleOngoing, handleDeleteTodo, modal, closeModal } =
         useContext(TodoContext);
 
     const allCompleted = todos.length > 0 && todos.every(todo => todo.completed);
@@ -20,6 +20,7 @@ const TodoApp = () => {
                 todos={todos}
                 onToggleDone={toggleTodo}
                 onDeleteTodo={handleDeleteTodo}
+                onToggleOngoing={toggleOngoing} // ✅ Ensure function is passed
             />
 
             <TodoCompleteMsg allCompleted={allCompleted} />

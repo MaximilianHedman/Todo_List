@@ -25,7 +25,13 @@ $todo-form-btn-hover-background-color: #0056b3;
 $todo-item-background-color: #525252;
 $todo-item-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 
-$todo-item-p-color: #36ce59;
+$todo-item-ongoing-task-p-color: #ffa500;
+
+$todo-item-completed-task-p-color: #36ce59;
+$todo-item-completed-task-p-icon-color: #36ce59;
+
+$todo-item-btn-start-background-color: #8a2be2;
+$todo-item-btn-start-hover-background-color: #781ed6;
 
 $todo-item-btn-done-background-color: #29a847;
 $todo-item-btn-done-hover-background-color: #218737;
