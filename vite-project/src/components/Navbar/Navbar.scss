@@ -1,4 +1,4 @@
-@import "../../partials/colors";
+@use "../../partials/colors";
 
 nav {
     display: flex;
@@ -6,7 +6,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 2rem;
-    background-color: $nav-background-color;
+    background-color: colors.$nav-background-color;
 
     .brand-container h2 {
         font-family: "Dancing Script", cursive;
@@ -27,7 +27,7 @@ nav {
             display: none;
 
             a:hover {
-                color: $nav-links-desktop-a-hover;
+                color: colors.$nav-links-desktop-a-hover;
             }
         }
     }

@@ -1,19 +1,19 @@
-@import '../../partials/colors';
+@use '../../partials/colors';
 
 .complete-msg {
     text-align: center;
     margin-top: 1rem;
     font-size: 1.5rem;
     font-weight: bold;
-    color: $todo-complete-msg-color;
+    color: colors.$todo-complete-msg-color;
     animation: fadeIn 1s ease-in-out, bounce 1s infinite alternate;
 
     p {
-        background-color: #222;
+        background-color: colors.$todo-complete-msg-p-background-color;
         display: inline-block;
         padding: 0.8rem 1.5rem;
         border-radius: 10px;
-        box-shadow: $todo-complete-msg-p-box-shadow;
+        box-shadow: colors.$todo-complete-msg-p-box-shadow;
     }
 }
 

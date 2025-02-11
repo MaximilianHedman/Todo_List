@@ -1,14 +1,14 @@
-@import '../../partials/colors';
+@use '../../partials/colors';
 
 .todo-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    background-color: $todo-item-background-color;
+    background-color: colors.$todo-item-background-color;
     padding: 1rem;
     border-radius: 8px;
-    box-shadow: $todo-item-box-shadow;
+    box-shadow: colors.$todo-item-box-shadow;
     gap: .7rem;
 
     p {
@@ -20,7 +20,7 @@
     
     .line-over {
         // text-decoration: line-through;
-        color: $todo-item-p-color;
+        color: colors.$todo-item-p-color;
     }
 
     .btn {
@@ -32,27 +32,27 @@
         transition: 0.3s;
 
         &.btn-done {
-            background-color: $todo-item-btn-done-background-color;
+            background-color: colors.$todo-item-btn-done-background-color;
 
             &:hover {
-                background-color: $todo-item-btn-done-hover-background-color;
+                background-color: colors.$todo-item-btn-done-hover-background-color;
             }
 
             &.completed {
-                background-color: $todo-item-btn-undo-background-color;
-                color: $todo-item-btn-undo-color;
+                background-color: colors.$todo-item-btn-undo-background-color;
+                color: colors.$todo-item-btn-undo-color;
 
                 &:hover {
-                    background-color: $todo-item-btn-undo-hover-background-color;
+                    background-color: colors.$todo-item-btn-undo-hover-background-color;
                 }
             }
         }
 
         &.btn-delete {
-            background-color: $todo-item-btn-delete-background-color;
+            background-color: colors.$todo-item-btn-delete-background-color;
 
             &:hover {
-                background-color: $todo-item-btn-delete-hover-background-color;
+                background-color: colors.$todo-item-btn-delete-hover-background-color;
             }
         }
     }

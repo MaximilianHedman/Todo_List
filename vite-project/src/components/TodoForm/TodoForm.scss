@@ -1,4 +1,4 @@
-@import '../../partials/colors';
+@use '../../partials/colors';
 
 .todo-form {
     display: flex;
@@ -10,17 +10,17 @@
         width: 100%;
         min-height: 60px;
         padding: 0.5rem;
-        border: 1px solid $todo-form-textarea-border-color;
+        border: 1px solid colors.$todo-form-textarea-border-color;
         border-radius: 5px;
         font-size: 1rem;
-        background-color: $todo-form-textarea-background-color;
+        background-color: colors.$todo-form-textarea-background-color;
         resize: none;
         max-height: 120px;
         overflow: auto;
     }
 
     button {
-        background-color: $todo-form-btn-background-color;
+        background-color: colors.$todo-form-btn-background-color;
         padding: 0.6rem;
         border: none;
         border-radius: 5px;
@@ -29,7 +29,7 @@
         transition: 0.3s;
 
         &:hover {
-            background-color: $todo-form-btn-hover-background-color;
+            background-color: colors.$todo-form-btn-hover-background-color;
         }
     }
 

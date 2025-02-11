@@ -1,3 +1,5 @@
+@use '../../partials/colors';
+
 footer {
     display: flex;
     flex-direction: column;
@@ -6,7 +8,7 @@ footer {
     text-align: center;
     padding: 1rem;
     gap: 1rem;
-    background-color: $footer-background-color;
+    background-color: colors.$footer-background-color;
 
     svg {
         padding: .4rem;
@@ -16,7 +18,7 @@ footer {
     a[href*="github"] svg:hover,
     a[href*="facebook"] svg:hover {
         path {
-            fill: $footer-icon-hover-color;
+            fill: colors.$footer-icon-hover-color;
             /* Change this to any desired color */
         }
     }
