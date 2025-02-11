@@ -15,39 +15,41 @@ const TodoItem = ({ todo, onToggleDone, onDeleteTodo, onToggleOngoing }) => {
                 )}
             </p>
 
-            {/* If task is ongoing, show "Done" first, then "Undo", then "Delete" */}
-            {todo.ongoing ? (
-                <>
+            {/* Buttons in a Column with Done at the Top */}
+            <div className="button-group">
+                {/* Done Button - Only Show if Task is Ongoing */}
+                {todo.ongoing && (
                     <button
                         className={`btn btn-done ${todo.completed ? "completed" : ""}`}
                         onClick={() => onToggleDone(todo.id)}
                     >
                         Done <FontAwesomeIcon icon={["fas", "check-circle"]} />
                     </button>
+                )}
 
+                {/* Start / Undo Button - Hide if Task is Completed */}
+                {!todo.completed && (
                     <button
-                        className="btn btn-start undo"
+                        className={`btn btn-start ${todo.ongoing ? "undo" : ""}`}
                         onClick={() => onToggleOngoing(todo.id)}
                     >
-                        Undo <FontAwesomeIcon icon={["fas", "undo"]} />
+                        {todo.ongoing ? (
+                            <>
+                                Undo <FontAwesomeIcon icon={["fas", "undo"]} />
+                            </>
+                        ) : (
+                            <>
+                                Start <FontAwesomeIcon icon={["fas", "play"]} />
+                            </>
+                        )}
                     </button>
-                </>
-            ) : (
-                // If task is not ongoing, show "Start" button instead
-                !todo.completed && (
-                    <button
-                        className="btn btn-start"
-                        onClick={() => onToggleOngoing(todo.id)}
-                    >
-                        Start <FontAwesomeIcon icon={["fas", "play"]} />
-                    </button>
-                )
-            )}
+                )}
 
-            {/* Delete button remains last in both cases */}
-            <button className="btn btn-delete" onClick={() => onDeleteTodo(todo.id, todo.completed)}>
-                Delete <FontAwesomeIcon icon={["fas", "trash"]} />
-            </button>
+                {/* Delete Button - Always at the Bottom */}
+                <button className="btn btn-delete" onClick={() => onDeleteTodo(todo.id, todo.completed)}>
+                    Delete <FontAwesomeIcon icon={["fas", "trash"]} />
+                </button>
+            </div>
         </div>
     );
 };

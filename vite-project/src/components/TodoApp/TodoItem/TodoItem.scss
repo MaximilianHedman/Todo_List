@@ -34,6 +34,13 @@
         }
     }
 
+    .button-group {
+        display: flex;
+        flex-direction: column; // Stack buttons vertically
+        align-items: flex-end; // Align buttons to the right
+        gap: 0.5rem;
+    }
+
     .btn {
         display: flex;
         justify-content: center;
@@ -45,6 +52,7 @@
         font-size: 0.9rem;
         cursor: pointer;
         transition: 0.3s;
+        width: 100px;
 
         &.btn-start {
             background-color: colors.$todo-item-btn-start-background-color;
