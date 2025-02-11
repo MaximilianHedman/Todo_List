@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { TodoContext } from "../../context/TodoContext";
-import TodoForm from "../TodoForm/TodoForm";
-import TodoList from "../TodoList/TodoList";
+import TodoForm from "./TodoForm/TodoForm";
+import TodoList from "./TodoList/TodoList";
 import Modal from "../Modal/Modal";
 import TodoCompleteMsg from "../TodoCompleteMsg/TodoCompleteMsg";
 import "./TodoApp.scss";
