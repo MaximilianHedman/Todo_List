@@ -18,14 +18,14 @@ export const TodoProvider = ({ children }) => {
     }, [todos]);
 
     const addTodo = (todo) => {
-        setTodos([{ ...todo, ongoing: false }, ...todos]); // Ensure ongoing starts as false
+        setTodos([{ ...todo, ongoing: false }, ...todos]);
     };
 
     const toggleTodo = (id) => {
         setTodos(
             todos.map((todo) =>
                 todo.id === id
-                    ? { ...todo, completed: !todo.completed, ongoing: false } // Mark done & remove ongoing
+                    ? { ...todo, completed: !todo.completed, ongoing: false }
                     : todo
             )
         );
@@ -35,7 +35,7 @@ export const TodoProvider = ({ children }) => {
         setTodos((prevTodos) =>
             prevTodos.map((todo) => ({
                 ...todo,
-                ongoing: todo.id === id ? !todo.ongoing : false, // Ensures only one ongoing task at a time
+                ongoing: todo.id === id ? !todo.ongoing : false,
             }))
         );
     };

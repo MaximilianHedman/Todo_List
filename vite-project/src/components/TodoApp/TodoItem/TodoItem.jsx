@@ -42,7 +42,6 @@ const TodoItem = ({ todo, onToggleDone, onDeleteTodo, onToggleOngoing }) => {
                     </button>
                 )}
 
-                {/* Delete Button - Now Triggers Confirmation */}
                 <button className="btn btn-delete" onClick={() => onDeleteTodo(todo.id, todo.completed, todo.ongoing)}>
                     Delete <FontAwesomeIcon icon={["fas", "trash"]} />
                 </button>
