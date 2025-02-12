@@ -7,7 +7,7 @@ const TodoItem = ({ todo, onToggleDone, onDeleteTodo, onToggleOngoing }) => {
         <div className="todo-item">
             <p className={`${todo.completed ? "completed-task" : ""} ${todo.ongoing ? "ongoing-text" : ""}`}>
                 {todo.title}
-                {todo.ongoing && !todo.completed && <span className="ongoing-indicator">⏳</span>}
+                {todo.ongoing && !todo.completed && <span className="ongoing-indicator"> ⏳</span>}
                 {todo.completed && (
                     <span className="completed-check">
                         <FontAwesomeIcon icon={["fas", "check"]} />
