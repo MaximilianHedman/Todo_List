@@ -16,6 +16,7 @@
         font-size: 1rem;
         margin-right: 1rem;
         word-break: break-word;
+        text-align: left;
 
         &.completed-task {
             color: colors.$todo-item-completed-task-p-color;
