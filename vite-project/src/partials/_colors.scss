@@ -19,8 +19,8 @@ $todo-complete-msg-p-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 $todo-form-textarea-background-color: #525252;
 $todo-form-textarea-border-color: #666;
 
-$todo-form-btn-background-color: #007bff;
-$todo-form-btn-hover-background-color: #0056b3;
+$todo-form-btn-add-background-color: #007bff;
+$todo-form-btn-add-hover-background-color: #0056b3;
 // ___________________________________________________________________TODOITEM______________________________________________________________
 $todo-item-background-color: #525252;
 $todo-item-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
@@ -51,3 +51,10 @@ $modal-content-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
 
 $modal-btn-close-background-color: #dc3545;
 $modal-btn-close-hover-background-color: #c82333;
+// ___________________________________________________________________ABOUT_________________________________________________________________
+$about-add-color: #007bff;
+$about-start-color: #8a2be2;
+$about-undo-color: #ffc400;
+$about-ongoing-color: #ffa500;
+$about-done-color: #36ce59;
+$about-delete-color: #dc3545;

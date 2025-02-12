@@ -18,19 +18,19 @@ const About = () => {
                 </p>
                 <ol>
                     <li>
-                        1️⃣ Add a Task – Type in your task and hit "Add" to create a new item on your list.
+                        <p> 1️⃣ Add a Task – Type in your task and hit "<span className='add-color'>Add</span>" or the "Enter key" to create a new item on your list.</p>
                     </li>
                     <li>
-                        2️⃣ Start the Task – Click "Start" to begin working on a task. This marks it as ongoing, turning the task text orange and displaying a ⏳ indicator.
+                        <p> 2️⃣ Start the Task – Click "<span className='start-color'>Start</span>" to begin working on a task. This marks it as ongoing, turning the task text <span className='ongoing-color'>orange</span> and displaying a ⏳ indicator.</p>
                     </li>
                     <li>
-                        3️⃣ Complete the Task – Once finished, click "Done", turning the task text green and removing the ongoing status. A ✔️ checkmark is added to indicate completion.
+                        <p> 3️⃣ Complete the Task – Once finished, click "<span className='done-color'>Done</span>", turning the task text <span className='done-color'>green</span> and removing the ongoing status. A ✔️ checkmark is added to indicate completion.</p>
                     </li>
                     <li>
-                        4️⃣ Undo if Needed – If a task was marked done by mistake, click "Undo" to reset it.
+                        <p> 4️⃣ Undo if Needed – If a task was marked done by mistake, click "<span className='undo-color'>Undo</span>" to reset it.</p>
                     </li>
                     <li>
-                        5️⃣ Delete Completed Tasks – Tasks can only be deleted once they are marked done, preventing accidental removal of unfinished work.
+                        <p> 5️⃣ Delete Completed Tasks – Tasks can only be deleted once they are marked done, preventing accidental removal of unfinished work.</p>
                     </li>
                 </ol>
             </section>
@@ -38,16 +38,16 @@ const About = () => {
                 <h2>Features 🌟</h2>
                 <ul>
                     <li>
-                        ✅ Dynamic Task States – Tasks move through different stages: Not Started → Ongoing → Completed.
+                        <p>✅ Dynamic Task States – Tasks move through different stages: Not Started → <span className='ongoing-color'>Ongoing</span> → <span className='done-color'>Completed</span>.</p>
                     </li>
                     <li>
-                        ✅ Visual Cues – Orange for ongoing, green for completed, with a checkmark for extra clarity.
+                        <p>✅ Visual Cues – <span className='ongoing-color'>Orange</span> for ongoing, <span className='done-color'>green</span> for completed, with a checkmark for extra clarity.</p>
                     </li>
                     <li>
-                        ✅ Easy Task Management – Tasks are stacked neatly with buttons for Start, Done, Undo, and Delete in a clean, structured layout.
+                        <p>✅ Easy Task Management – Tasks are stacked neatly with buttons for <span className='start-color'>Start</span>, <span className='done-color'>Done</span>, <span className='undo-color'>Undo</span>, and <span className='delete-color'>Delete</span> in a clean, structured layout.</p>
                     </li>
                     <li>
-                        ✅ Local Storage Support – Your tasks are saved automatically, so they remain available even if you refresh the page.
+                        <p>✅ Local Storage Support – Your tasks are saved automatically, so they remain available even if you refresh the page.</p>
                     </li>
                 </ul>
             </section>
@@ -55,16 +55,16 @@ const About = () => {
                 <h2>Why Use the Todo App?</h2>
                 <ul>
                     <li>
-                        🚀 Stay Organized – Never lose track of important tasks again.
+                        <p>🚀 Stay Organized – Never lose track of important tasks again.</p>
                     </li>
                     <li>
-                        📅 Boost Productivity – Plan your work effectively and stay focused.
+                        <p>📅 Boost Productivity – Plan your work effectively and stay focused.</p>
                     </li>
                     <li>
-                        🖥️ User-Friendly Interface – Simple, intuitive design for effortless task management.
+                        <p>🖥️ User-Friendly Interface – Simple, intuitive design for effortless task management.</p>
                     </li>
                     <li>
-                        💾 No Data Loss – Your tasks remain stored even after closing the app.
+                        <p>💾 No Data Loss – Your tasks remain stored even after closing the app.</p>
                     </li>
                 </ul>
             </section>
