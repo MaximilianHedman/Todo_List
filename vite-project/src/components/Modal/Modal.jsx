@@ -1,7 +1,7 @@
 import React from "react";
 import "./Modal.scss";
 
-const Modal = ({ onClose, children }) => {
+const Modal = ({ onClose, children, onConfirm }) => {
     const handleOutsideClick = (e) => {
         if (e.target.classList.contains("modal")) {
             onClose();
@@ -12,9 +12,16 @@ const Modal = ({ onClose, children }) => {
         <div className="modal" onClick={handleOutsideClick}>
             <div className="modal-content">
                 {children}
-                <button className="btn-close" onClick={onClose}>
-                    Close
-                </button>
+                <div className="modal-actions">
+                    {onConfirm && (
+                        <button className="btn btn-confirm" onClick={onConfirm}>
+                            Confirm
+                        </button>
+                    )}
+                    <button className="btn btn-close" onClick={onClose}>
+                        Cancel
+                    </button>
+                </div>
             </div>
         </div>
     );

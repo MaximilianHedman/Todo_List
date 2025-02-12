@@ -44,12 +44,29 @@ export const TodoProvider = ({ children }) => {
         setTodos(todos.filter((todo) => todo.id !== id));
     };
 
-    const handleDeleteTodo = (id, completed) => {
+    const handleDeleteTodo = (id, completed, ongoing) => {
+        if (!completed && !ongoing) {
+            showDeleteConfirmation(id);
+            return;
+        }
+
         if (!completed) {
             showModal("Cannot delete a todo that is not completed!");
             return;
         }
-        deleteTodo(id);
+
+        showDeleteConfirmation(id);
+    };
+
+    const showDeleteConfirmation = (id) => {
+        setModal({
+            isVisible: true,
+            message: "Are you sure you want to delete this task?",
+            confirmAction: () => {
+                deleteTodo(id);
+                closeModal();
+            },
+        });
     };
 
     const showModal = (message) => {
@@ -64,9 +81,10 @@ export const TodoProvider = ({ children }) => {
         todos,
         addTodo,
         toggleTodo,
-        toggleOngoing, // ✅ Ensure function is included
+        toggleOngoing,
         deleteTodo,
         handleDeleteTodo,
+        showDeleteConfirmation,
         modal,
         showModal,
         closeModal,

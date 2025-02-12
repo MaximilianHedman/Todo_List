@@ -20,13 +20,13 @@ const TodoApp = () => {
                 todos={todos}
                 onToggleDone={toggleTodo}
                 onDeleteTodo={handleDeleteTodo}
-                onToggleOngoing={toggleOngoing} // ✅ Ensure function is passed
+                onToggleOngoing={toggleOngoing}
             />
 
             <TodoCompleteMsg allCompleted={allCompleted} />
 
             {modal.isVisible && (
-                <Modal onClose={closeModal}>
+                <Modal onClose={closeModal} onConfirm={modal.confirmAction ? modal.confirmAction : null}>
                     <p>{modal.message}</p>
                 </Modal>
             )}

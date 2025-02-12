@@ -7,7 +7,7 @@ const TodoItem = ({ todo, onToggleDone, onDeleteTodo, onToggleOngoing }) => {
         <div className="todo-item">
             <p className={`${todo.completed ? "completed-task" : ""} ${todo.ongoing ? "ongoing-text" : ""}`}>
                 {todo.title}
-                {todo.ongoing && !todo.completed && <span className="ongoing-indicator"> ⏳</span>}
+                {todo.ongoing && !todo.completed && <span className="ongoing-indicator">⏳</span>}
                 {todo.completed && (
                     <span className="completed-check">
                         <FontAwesomeIcon icon={["fas", "check"]} />
@@ -15,9 +15,7 @@ const TodoItem = ({ todo, onToggleDone, onDeleteTodo, onToggleOngoing }) => {
                 )}
             </p>
 
-            {/* Buttons in a Column with Done at the Top */}
             <div className="button-group">
-                {/* Done Button - Only Show if Task is Ongoing */}
                 {todo.ongoing && (
                     <button
                         className={`btn btn-done ${todo.completed ? "completed" : ""}`}
@@ -27,7 +25,6 @@ const TodoItem = ({ todo, onToggleDone, onDeleteTodo, onToggleOngoing }) => {
                     </button>
                 )}
 
-                {/* Start / Undo Button - Hide if Task is Completed */}
                 {!todo.completed && (
                     <button
                         className={`btn btn-start ${todo.ongoing ? "undo" : ""}`}
@@ -45,8 +42,8 @@ const TodoItem = ({ todo, onToggleDone, onDeleteTodo, onToggleOngoing }) => {
                     </button>
                 )}
 
-                {/* Delete Button - Always at the Bottom */}
-                <button className="btn btn-delete" onClick={() => onDeleteTodo(todo.id, todo.completed)}>
+                {/* Delete Button - Now Triggers Confirmation */}
+                <button className="btn btn-delete" onClick={() => onDeleteTodo(todo.id, todo.completed, todo.ongoing)}>
                     Delete <FontAwesomeIcon icon={["fas", "trash"]} />
                 </button>
             </div>
