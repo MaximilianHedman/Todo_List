@@ -32,12 +32,11 @@ export const TodoProvider = ({ children }) => {
     };
 
     const toggleOngoing = (id) => {
-        setTodos(
-            todos.map((todo) =>
-                todo.id === id
-                    ? { ...todo, ongoing: !todo.ongoing, completed: false } // Prevent marking completed while ongoing
-                    : todo
-            )
+        setTodos((prevTodos) =>
+            prevTodos.map((todo) => ({
+                ...todo,
+                ongoing: todo.id === id ? !todo.ongoing : false, // Ensures only one ongoing task at a time
+            }))
         );
     };
 
