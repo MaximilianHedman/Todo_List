@@ -1,8 +1,8 @@
 import React, { createContext, useState, useEffect } from "react";
 
-export const TodoContext = createContext();
+const TodoContext = createContext();
 
-export const TodoProvider = ({ children }) => {
+const TodoProvider = ({ children }) => {
     const [todos, setTodos] = useState(() => {
         const savedTodos = localStorage.getItem("todos");
         return savedTodos ? JSON.parse(savedTodos) : [];
@@ -92,3 +92,6 @@ export const TodoProvider = ({ children }) => {
 
     return <TodoContext.Provider value={value}>{children}</TodoContext.Provider>;
 };
+
+export { TodoContext };
+export default TodoProvider;

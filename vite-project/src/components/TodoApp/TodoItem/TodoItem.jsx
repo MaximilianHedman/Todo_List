@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import { TodoContext } from '../../../context/TodoContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "./TodoItem.scss";
 
-const TodoItem = ({ todo, onToggleDone, onDeleteTodo, onToggleOngoing }) => {
+const TodoItem = ({ todo }) => {
+    const { toggleTodo, handleDeleteTodo, toggleOngoing } = useContext(TodoContext);
+
     return (
         <div className="todo-item">
             <p className={`${todo.completed ? "completed-task" : ""} ${todo.ongoing ? "ongoing-text" : ""}`}>
@@ -19,7 +22,7 @@ const TodoItem = ({ todo, onToggleDone, onDeleteTodo, onToggleOngoing }) => {
                 {todo.ongoing && (
                     <button
                         className={`btn btn-done ${todo.completed ? "completed" : ""}`}
-                        onClick={() => onToggleDone(todo.id)}
+                        onClick={() => toggleTodo(todo.id)}
                     >
                         Done <FontAwesomeIcon icon={["fas", "check-circle"]} />
                     </button>
@@ -28,7 +31,7 @@ const TodoItem = ({ todo, onToggleDone, onDeleteTodo, onToggleOngoing }) => {
                 {!todo.completed && (
                     <button
                         className={`btn btn-start ${todo.ongoing ? "undo" : ""}`}
-                        onClick={() => onToggleOngoing(todo.id)}
+                        onClick={() => toggleOngoing(todo.id)}
                     >
                         {todo.ongoing ? (
                             <>
@@ -42,7 +45,7 @@ const TodoItem = ({ todo, onToggleDone, onDeleteTodo, onToggleOngoing }) => {
                     </button>
                 )}
 
-                <button className="btn btn-delete" onClick={() => onDeleteTodo(todo.id, todo.completed, todo.ongoing)}>
+                <button className="btn btn-delete" onClick={() => handleDeleteTodo(todo.id, todo.completed, todo.ongoing)}>
                     Delete <FontAwesomeIcon icon={["fas", "trash"]} />
                 </button>
             </div>
