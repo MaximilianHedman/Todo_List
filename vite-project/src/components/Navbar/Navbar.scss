@@ -2,61 +2,96 @@
 
 nav {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 1rem 2rem;
     background-color: colors.$nav-background-color;
+    padding: 1rem 2rem;
 
-    .brand-container h2 {
-        font-family: "Dancing Script", cursive;
-        font-weight: 700;
-        font-size: 26px;
+    .brand-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+
+        h2 {
+            font-family: "Dancing Script", cursive;
+            font-weight: 700;
+            font-size: 26px;
+        }
     }
 
-    .nav-links-container {
+    .menu-toggle {
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    .mobile-menu {
         display: flex;
         flex-direction: column;
+        width: 100%;
+        align-items: center;
+        background-color: colors.$nav-mobile-menu-background-color;
         gap: 1rem;
-        padding-bottom: .5rem;
+        padding: 1rem 0;
+        transition: max-height 0.3s ease-in-out;
+        overflow: hidden;
+        max-height: 0;
 
-        .nav-links-mobile {
-            display: flex;
+        &.open {
+            max-height: 500px;
         }
-        .nav-links-desktop {
-            display: none;
 
-            a:hover {
-                color: colors.$nav-links-desktop-a-hover;
+        ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+
+            li {
+                width: 100%;
+                text-align: center;
+                padding: 1rem 0;
+                border-bottom: 1px solid colors.$nav-mobile-menu-li-border-bottom-color;
+
+                a {
+                    text-decoration: none;
+                    font-size: 18px;
+                    display: block;
+                    width: 100%;
+                }
             }
         }
     }
-}
 
-/*_________________________________MEDIA QUERY'S__________________________*/
-@media (min-width: 540px) {
-    .brand-container h2 {
-        font-size: 36px;
+    .nav-links-desktop {
+        display: none;
     }
-}
 
-@media (min-width: 933px) {
-    nav {
+    @media (min-width: 933px) {
         flex-direction: column;
 
-        .brand-container h2 {
-            font-size: 60px;
+        .brand-container {
+            h2 {
+                margin: auto;
+                font-size: 60px;
+            }
         }
 
-        .nav-links-container {
+        .menu-toggle {
+            display: none;
+        }
 
-            .nav-links-mobile {
-                display: none;
-            }
-        
-            .nav-links-desktop {
-                display: flex;
-            }
-        } 
+        .mobile-menu {
+            display: none;
+        }
+
+        .nav-links-desktop {
+            display: flex;
+            flex-direction: row;
+            gap: 1.5rem;
+        }
     }
 }
