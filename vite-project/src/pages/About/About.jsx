@@ -13,10 +13,8 @@ const About = () => {
             </section>
             <section className='about-section'>
                 <h2>How It Works 🛠️</h2>
-                <p>
-                    The Todo App is designed with a clear and intuitive workflow:
-                </p>
-                <ol>
+                <h3>The Todo App is designed with a clear and intuitive workflow:</h3>
+                <ul>
                     <li>
                         <p> 1️⃣ Add a Task – Type in your task and hit "<span className='add-color'>Add</span>" or the "Enter key" to create a new item on your list.</p>
                     </li>
@@ -32,7 +30,7 @@ const About = () => {
                     <li>
                         <p> 5️⃣ Delete Completed Tasks – Tasks can only be deleted once they are marked done, preventing accidental removal of unfinished work.</p>
                     </li>
-                </ol>
+                </ul>
             </section>
             <section className='about-section'>
                 <h2>Features 🌟</h2>

@@ -4,10 +4,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 40%;
-    margin: auto;
+    width: 85%;
+    margin: 2rem auto;
     gap: 2rem;
     padding: 2rem;
+    border-radius: .5rem;
+    background-color: #1e1e1e;
 
     h1, h2 {
         text-align: center;
@@ -22,12 +24,15 @@
         padding-bottom: 1rem;
     }
 
-    .about-section, ol, ul {
+    .about-section, ul {
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         list-style: none;
         width: 100%;
+        padding: 1rem;
+        border-radius: .5rem;
+        background-color: #2c2f33;
         
         .add-color {
             color: colors.$about-add-color;
@@ -50,5 +55,9 @@
         .delete-color {
             color: colors.$about-delete-color;
         }
+    }
+
+    @media (min-width: 1440px) {
+        width: 50%;
     }
 }
