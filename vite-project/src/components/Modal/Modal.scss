@@ -21,7 +21,7 @@
         max-width: 90%;
         animation: fadeIn 0.3s ease-in-out;
         box-shadow: colors.$modal-content-box-shadow;
-        background-color: colors.$modal-content-background-color;
+        background: var(--gobal-todo-app-secondary-background-color);
 
         .modal-actions {
             display: flex;
@@ -29,6 +29,12 @@
             gap: 1rem;
             margin-top: 1rem;
 
+            .btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: .4rem;
+            }
             .btn-confirm {
                 font-size: 1rem;
                 padding: .5rem;

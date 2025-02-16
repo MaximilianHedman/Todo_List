@@ -1,6 +1,7 @@
 [data-theme='light'] {
     --global-color: #000;
     --global-background-color: #fff;
+    --global-todo-item-button-color: #fff;
     --gobal-todo-app-primary-background-color: hsl(0, 0%, 95%);
     --gobal-todo-app-secondary-background-color: hsl(0, 0%, 90%);
 }
@@ -8,6 +9,7 @@
 [data-theme='dark'] {
     --global-color: #fff;
     --global-background-color: #303030;
+    --global-todo-item-button-color: #fff;
     --gobal-todo-app-primary-background-color: #424242;
     --gobal-todo-app-secondary-background-color: #525252;
     
@@ -15,6 +17,7 @@
 
 [data-theme='pride'] {
     --global-color: #ffffff;
+    --global-todo-item-button-color: #fff;
     --global-background-color: linear-gradient(to right, #ff0000, #ff9900, #ffff00, #008000, #0000ff, #4b0082, #8b00ff);
     --gobal-todo-app-primary-background-color: linear-gradient(to left, #ff0000, #ff9900, #ffff00, #008000, #0000ff, #4b0082, #8b00ff);
     --gobal-todo-app-secondary-background-color: radial-gradient(blue, purple);

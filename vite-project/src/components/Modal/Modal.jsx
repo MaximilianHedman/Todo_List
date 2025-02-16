@@ -1,4 +1,5 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import "./Modal.scss";
 
 const Modal = ({ onClose, children, onConfirm }) => {
@@ -15,11 +16,11 @@ const Modal = ({ onClose, children, onConfirm }) => {
                 <div className="modal-actions">
                     {onConfirm && (
                         <button className="btn btn-confirm" onClick={onConfirm}>
-                            Confirm
+                            Confirm <FontAwesomeIcon icon={["fas", "check-circle"]} />
                         </button>
                     )}
                     <button className="btn btn-close" onClick={onClose}>
-                        Cancel
+                        Cancel <FontAwesomeIcon icon={["fas", "cancel"]} />
                     </button>
                 </div>
             </div>

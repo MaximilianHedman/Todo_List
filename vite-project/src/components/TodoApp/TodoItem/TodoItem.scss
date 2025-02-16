@@ -54,6 +54,11 @@
         transition: 0.3s;
         width: 100px;
         cursor: pointer;
+        color: var(--global-todo-item-button-color);
+
+        svg path{
+            fill: var(--global-todo-item-button-color);
+        }
         
         &.btn-start {
             background-color: colors.$todo-item-btn-start-background-color;
