@@ -2,22 +2,21 @@
 
 .complete-msg {
     text-align: center;
-    margin-top: 1rem;
     font-size: 1.5rem;
     font-weight: bold;
-    color: colors.$todo-complete-msg-color;
+    margin-top: 1rem;
     animation: fadeIn 1s ease-in-out, bounce 1s infinite alternate;
+    color: colors.$todo-complete-msg-color;
 
     p {
-        background-color: colors.$todo-complete-msg-p-background-color;
         display: inline-block;
         padding: 0.8rem 1.5rem;
         border-radius: 10px;
         box-shadow: colors.$todo-complete-msg-p-box-shadow;
+        background-color: colors.$todo-complete-msg-p-background-color;
     }
 }
 
-// Fade-in effect
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -30,7 +29,6 @@
     }
 }
 
-// Bouncing effect for fun animation
 @keyframes bounce {
     from {
         transform: translateY(0);

@@ -10,10 +10,10 @@ footer {
     gap: 1rem;
     background-color: colors.$footer-background-color;
 
-    svg {
-        padding: .4rem;
-
-        path:hover {
+    a[href*="linkedin"] svg:hover,
+    a[href*="github"] svg:hover,
+    a[href*="facebook"] svg:hover {
+        path {
             fill: colors.$footer-icon-hover-color;
         }
     }

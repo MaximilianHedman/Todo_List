@@ -1,14 +1,14 @@
 @use '../../partials/colors';
 
 .todo-app {
-    width: 90%;
-    max-width: 400px;
-    background-color: colors.$todo-app-background-color;
+    text-align: center;
+    margin: auto;
     padding: 1.5rem;
     border-radius: 10px;
-    margin: auto;
-    text-align: center;
+    width: 90%;
+    max-width: 400px;
     box-shadow: colors.$todo-app-box-shadow;
+    background-color: colors.$todo-app-background-color;
 
     h2 {
         font-size: 1.8rem;

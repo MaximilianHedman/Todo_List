@@ -7,8 +7,7 @@ import TodoCompleteMsg from "./TodoCompleteMsg/TodoCompleteMsg";
 import "./TodoApp.scss";
 
 const TodoApp = () => {
-    const { todos, addTodo, toggleTodo, toggleOngoing, handleDeleteTodo, modal, closeModal } =
-        useContext(TodoContext);
+    const { todos, addTodo, toggleTodo, toggleOngoing, handleDeleteTodo, modal, closeModal } = useContext(TodoContext);
 
     const allCompleted = todos.length > 0 && todos.every(todo => todo.completed);
 
@@ -16,14 +15,13 @@ const TodoApp = () => {
         <main className="todo-app">
             <h2>Todo List</h2>
             <TodoForm onAddTodo={addTodo} />
+            <TodoCompleteMsg allCompleted={allCompleted} />
             <TodoList
                 todos={todos}
                 onToggleDone={toggleTodo}
                 onDeleteTodo={handleDeleteTodo}
                 onToggleOngoing={toggleOngoing}
             />
-
-            <TodoCompleteMsg allCompleted={allCompleted} />
 
             {modal.isVisible && (
                 <Modal onClose={closeModal} onConfirm={modal.confirmAction ? modal.confirmAction : null}>

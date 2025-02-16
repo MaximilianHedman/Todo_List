@@ -4,13 +4,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 85%;
-    margin: 2rem auto;
     gap: 2rem;
+    margin: 2rem auto;
     padding: 2rem;
     border-radius: .5rem;
-    background-color: colors.$about-container-background-color;
+    width: 85%;
     max-width: 1024px;
+    background-color: colors.$about-container-background-color;
 
     h1,
     h2 {
@@ -31,12 +31,12 @@
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        list-style: none;
-        width: 100%;
+        flex: 1 1 clamp(300px, 50%, 600px);
         padding: 1rem;
         border-radius: .5rem;
+        width: 100%;
+        list-style: none;
         background-color: colors.$about-section-ul-background-color;
-        flex: 1 1 clamp(300px, 50%, 600px);
 
         .add-color,
         .start-color,

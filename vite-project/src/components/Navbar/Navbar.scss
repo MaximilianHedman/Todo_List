@@ -25,45 +25,45 @@ nav {
     }
 
     .menu-toggle {
-        background: none;
-        border: none;
         font-size: 24px;
+        border: none;
         cursor: pointer;
+        background: none;
     }
 
     .mobile-menu {
         display: flex;
         flex-direction: column;
-        width: 100%;
         align-items: center;
-        background-color: colors.$nav-mobile-menu-background-color;
-        gap: 1rem;
         padding: 1rem 0;
-        transition: max-height 0.3s ease-in-out;
-        overflow: hidden;
+        width: 100%;
         max-height: 0;
+        gap: 1rem;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+        background-color: colors.$nav-mobile-menu-background-color;
 
         &.open {
             max-height: 500px;
         }
 
         ul {
-            list-style: none;
             display: flex;
             flex-direction: column;
-            width: 100%;
             align-items: center;
+            list-style: none;
+            width: 100%;
 
             li {
-                width: 100%;
                 text-align: center;
                 padding: 1rem 0;
+                width: 100%;
                 border-bottom: 1px solid colors.$nav-mobile-menu-li-border-bottom-color;
 
                 a {
+                    display: block;
                     text-decoration: none;
                     font-size: 18px;
-                    display: block;
                     width: 100%;
                 }
             }
@@ -72,6 +72,10 @@ nav {
 
     .nav-links-desktop {
         display: none;
+
+        a:hover {
+            color: colors.$nav-links-desktop-a-hover;
+        }
     }
 
     @media (min-width: 933px) {
