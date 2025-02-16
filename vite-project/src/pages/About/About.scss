@@ -9,7 +9,7 @@
     gap: 2rem;
     padding: 2rem;
     border-radius: .5rem;
-    background-color: #1e1e1e;
+    background-color: colors.$about-container-background-color;
     max-width: 1024px;
 
     h1,
@@ -35,8 +35,17 @@
         width: 100%;
         padding: 1rem;
         border-radius: .5rem;
-        background-color: #2c2f33;
+        background-color: colors.$about-section-ul-background-color;
         flex: 1 1 clamp(300px, 50%, 600px);
+
+        .add-color,
+        .start-color,
+        .ongoing-color,
+        .done-color,
+        .undo-color,
+        .delete-color {
+            text-shadow: colors.$about-text-shadow;
+        }
 
         .add-color {
             color: colors.$about-add-color;

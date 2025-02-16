@@ -6,7 +6,7 @@ $nav-background-color: #1a1a1a;
 $nav-links-desktop-a-hover: #d64f4f;
 
 $nav-mobile-menu-background-color: #1a1a1a;
-$nav-mobile-menu-li-border-bottom-color: #fff;
+$nav-mobile-menu-li-border-bottom-color: hsla(0, 0%, 100%, 0.25);
 // ___________________________________________________________________FOOTER________________________________________________________________
 $footer-background-color: #171717;
 $footer-icon-hover-color: #d64f4f;
@@ -58,6 +58,12 @@ $modal-btn-confirm-hover-background-color: #218737;
 $modal-btn-close-background-color: #dc3545;
 $modal-btn-close-hover-background-color: #c82333;
 // ___________________________________________________________________ABOUT_________________________________________________________________
+$about-container-background-color: #424242;
+
+$about-section-ul-background-color: #525252;
+
+$about-text-shadow: -1.5px -1.5px 0 black, 1.5px -1.5px 0 black, -1.5px 1.5px 0 black, 1.5px 1.5px 0 black;
+
 $about-add-color: #007bff;
 $about-start-color: #8a2be2;
 $about-undo-color: #ffc400;

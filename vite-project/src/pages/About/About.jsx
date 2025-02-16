@@ -13,7 +13,6 @@ const About = () => {
             </section>
             <section className='about-section'>
                 <h2>How It Works 🛠️</h2>
-                <h3>The Todo App is designed with a clear and intuitive workflow:</h3>
                 <ul>
                     <li>
                         <p> 1️⃣ Add a Task – Type in your task and hit "<span className='add-color'>Add</span>" or the "Enter key" to create a new item on your list.</p>
