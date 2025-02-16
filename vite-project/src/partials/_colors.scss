@@ -1,6 +1,6 @@
 // ___________________________________________________________________GLOBAL________________________________________________________________
-$global-color: #fff;
-$global-background-color: #303030;
+$global-color: var(--global-color);
+$global-background-color: var(--global-background-color);
 // ___________________________________________________________________NAVBAR________________________________________________________________
 $nav-background-color: #1a1a1a;
 $nav-links-desktop-a-hover: #d64f4f;

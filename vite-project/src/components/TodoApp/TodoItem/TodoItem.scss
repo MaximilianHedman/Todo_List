@@ -9,7 +9,7 @@
     padding: 1rem;
     border-radius: 8px;
     box-shadow: colors.$todo-item-box-shadow;
-    background-color: colors.$todo-item-background-color;
+    background: var(--gobal-todo-app-secondary-background-color);
 
     p {
         flex: 1;

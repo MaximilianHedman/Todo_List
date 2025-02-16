@@ -10,7 +10,7 @@
     border-radius: .5rem;
     width: 85%;
     max-width: 1024px;
-    background-color: colors.$about-container-background-color;
+    background: var(--gobal-todo-app-primary-background-color);
 
     h1,
     h2 {
@@ -36,7 +36,7 @@
         border-radius: .5rem;
         width: 100%;
         list-style: none;
-        background-color: colors.$about-section-ul-background-color;
+        background: var(--gobal-todo-app-secondary-background-color);
 
         .add-color,
         .start-color,

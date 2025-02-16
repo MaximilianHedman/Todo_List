@@ -4,7 +4,7 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: colors.$nav-background-color;
+    background: var(--gobal-todo-app-primary-background-color);
     padding: 1rem 2rem;
 
     .brand-container {
@@ -18,6 +18,19 @@ nav {
             font-weight: 700;
             font-size: 26px;
         }
+
+        .nav-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+    }
+
+    .theme-toggle {
+        font-size: 24px;
+        border: none;
+        cursor: pointer;
+        background: none;
+        margin-left: 1rem;
     }
 
     .nav-links-container {
@@ -41,7 +54,7 @@ nav {
         gap: 1rem;
         overflow: hidden;
         transition: max-height 0.3s ease-in-out;
-        background-color: colors.$nav-mobile-menu-background-color;
+        background: none;
 
         &.open {
             max-height: 500px;
@@ -58,7 +71,7 @@ nav {
                 text-align: center;
                 padding: 1rem 0;
                 width: 100%;
-                border-bottom: 1px solid colors.$nav-mobile-menu-li-border-bottom-color;
+                border-bottom: 1px solid var(--global-color);
 
                 a {
                     display: block;

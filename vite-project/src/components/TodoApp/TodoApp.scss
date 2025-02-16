@@ -8,7 +8,7 @@
     width: 90%;
     max-width: 400px;
     box-shadow: colors.$todo-app-box-shadow;
-    background-color: colors.$todo-app-background-color;
+    background: var(--gobal-todo-app-primary-background-color);
 
     h2 {
         font-size: 1.8rem;

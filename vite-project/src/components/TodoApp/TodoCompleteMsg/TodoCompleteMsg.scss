@@ -6,14 +6,14 @@
     font-weight: bold;
     margin-top: 1rem;
     animation: fadeIn 1s ease-in-out, bounce 1s infinite alternate;
-    color: colors.$todo-complete-msg-color;
-
+    color: var(--global-color);
+    
     p {
         display: inline-block;
         padding: 0.8rem 1.5rem;
         border-radius: 10px;
         box-shadow: colors.$todo-complete-msg-p-box-shadow;
-        background-color: colors.$todo-complete-msg-p-background-color;
+        background: var(--global-background-color);
     }
 }
 
